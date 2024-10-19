@@ -1,7 +1,19 @@
 name: slide_show_pro
-description: "SlideShowPro is a Flutter-based application that allows you to create custom product or page introduction slides with smooth, customizable animations. Each slide enters with a unique transition effect, offering a sleek and engaging user experience."
+description: "Slide Show Pro is a powerful Flutter package 
+designed to simplify the creation of animated sliders. 
+With Slide Show Pro, you can seamlessly integrate various 
+animation effects such as fade, scale, slide, and rotate 
+into your projects. It also supports the ability to mix 
+and match these effects to create stunning and dynamic 
+transitions.
+
+Whether you're building an image gallery, 
+a product showcase, or any feature that requires 
+smooth and engaging animations, Slide Show Pro makes 
+it easy to achieve professional-grade results with 
+minimal effort."
+
 version: 0.0.1
-homepage:
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
