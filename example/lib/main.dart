@@ -22,6 +22,7 @@ class ExamplePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Slide Show Pro Example')),
       body: SlideShowProPage(
+        //viewportFraction: 0.6,
         children: [
           EffectsBuilder(
             child: const FadeSlide(
@@ -101,7 +102,7 @@ class ExamplePage extends StatelessWidget {
               alignment: Alignment.centerLeft,
             ),
             enteringBuilder: (child) {
-              return SlideEffect.fromTop(child: child);
+              return SlideEffect.reverseVertical(child: child);
             },
             exitingBuilder: (child) {
               return FixedPositionEffect.vertical(child: child);
@@ -157,7 +158,7 @@ class ExamplePage extends StatelessWidget {
               alignment: Alignment.centerRight,
             ),
             enteringBuilder: (child) {
-              return SlideEffect.fromTop(
+              return SlideEffect.reverseHorizontal(
                   child: RotateEffect.fromLeft(child: child));
             },
             exitingBuilder: (child) {
@@ -172,7 +173,7 @@ class ExamplePage extends StatelessWidget {
               alignment: Alignment.centerRight,
             ),
             enteringBuilder: (child) {
-              return SlideEffect.fromTop(
+              return SlideEffect.reverseVertical(
                   child: RotateEffect.fromRight(child: child));
             },
             exitingBuilder: (child) {

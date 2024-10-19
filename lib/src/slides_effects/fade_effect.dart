@@ -8,11 +8,11 @@ class FadeEffect extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Access the factor from the FactorInheritedWidget
-    double factor = FactorInheritedWidget.of(context)?.factor ?? 0.0;
+    final double factor = SlideShowFactors.of(context)?.factor ?? 0.0;
+    final double rangeLimit = SlideShowFactors.of(context)?.rangeLimit ?? 1.0;
 
-    // Calculate the opacity based on the factor (e.g., from 0 to 1)
-    double opacity = 1 - factor.abs();
+    // Calculate the opacity based on the factor and rangeLimit
+    final double opacity = 1 - (factor / rangeLimit).abs();
 
     return Opacity(
       opacity: opacity.clamp(0.0, 1.0), // Ensure the opacity is between 0 and 1

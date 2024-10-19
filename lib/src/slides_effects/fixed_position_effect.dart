@@ -25,16 +25,17 @@ class FixedPositionEffect extends StatelessWidget {
   // Slide from bottom to center
   @override
   Widget build(BuildContext context) {
-    // Access the factor from the FactorInheritedWidget
-    double factor = FactorInheritedWidget.of(context)?.factor ?? 0.0;
+    double factor = SlideShowFactors.of(context)?.factor ?? 0.0;
 
     // Calculate final offsets based on factor
     final effectiveOffsetX = offsetX * factor;
     final effectiveOffsetY = offsetY * factor;
 
     return FractionalTranslation(
-      translation: Offset(effectiveOffsetX,
-          effectiveOffsetY), // Slide the widget based on offsets
+      translation: Offset(
+        effectiveOffsetX,
+        effectiveOffsetY,
+      ), // Slide the widget based on offsets
       child: child,
     );
   }

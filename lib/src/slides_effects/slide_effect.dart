@@ -6,27 +6,39 @@ class SlideEffect extends StatelessWidget {
   final double offsetX; // Horizontal offset
   final double offsetY; // Vertical offset
 
-  // Named constructors for different sliding directions
+  /// slide from left to center for vertical scrolling
   const SlideEffect.fromLeft({super.key, required this.child})
       : offsetX = -1.0, // Slide from left to center
         offsetY = -1.0;
 
+  /// slide from right to center for vertical scrolling
   const SlideEffect.fromRight({super.key, required this.child})
       : offsetX = 1.0, // Slide from right to center
         offsetY = -1.0;
 
-  const SlideEffect.fromTop({super.key, required this.child})
+  /// slide from top to center for vertical scrolling
+  const SlideEffect.reverseVertical({super.key, required this.child})
       : offsetX = 0.0,
         offsetY = -2.0; // Slide from top to center
 
+  /// slide from Top to center for Horizontal scrolling
+  const SlideEffect.fromTop({super.key, required this.child})
+      : offsetX = -1.0,
+        offsetY = -1.0; // Slide from top to center
+
+  /// slide from bottom to center for Horizontal scrolling
   const SlideEffect.fromBottom({super.key, required this.child})
-      : offsetX = 0.0,
-        offsetY = 2.0; // Slide from bottom to center
+      : offsetX = -1.0,
+        offsetY = 1.0; // Slide from bottom to center
+
+  /// slide from left to center for Horizontal scrolling
+  const SlideEffect.reverseHorizontal({super.key, required this.child})
+      : offsetX = -2.0,
+        offsetY = 0.0; // Slide from bottom to center
 
   @override
   Widget build(BuildContext context) {
-    // Access the factor from the FactorInheritedWidget
-    double factor = FactorInheritedWidget.of(context)?.factor ?? 0.0;
+    double factor = SlideShowFactors.of(context)?.factor ?? 0.0;
 
     // Calculate final offsets based on factor
     final effectiveOffsetX = offsetX * factor;

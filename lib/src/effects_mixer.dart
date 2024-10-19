@@ -19,7 +19,7 @@ class EffectsBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Access the factor from the FactorInheritedWidget
-    double factor = FactorInheritedWidget.of(context)?.factor ?? 0.0;
+    double factor = SlideShowFactors.of(context)?.factor ?? 0.0;
 
     if (factor > 0) {
       return enteringBuilder(child);

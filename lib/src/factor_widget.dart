@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 
-class FactorInheritedWidget extends InheritedWidget {
+class SlideShowFactors extends InheritedWidget {
   final double factor;
+  final double rangeLimit;
 
-  const FactorInheritedWidget({
+  const SlideShowFactors({
     super.key,
     required this.factor,
+    required this.rangeLimit,
     required super.child,
   });
 
-  static FactorInheritedWidget? of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<FactorInheritedWidget>();
+  static SlideShowFactors? of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<SlideShowFactors>();
   }
 
   @override
-  bool updateShouldNotify(FactorInheritedWidget oldWidget) {
+  bool updateShouldNotify(SlideShowFactors oldWidget) {
     return factor != oldWidget.factor;
   }
 }

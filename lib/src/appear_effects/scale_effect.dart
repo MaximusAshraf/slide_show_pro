@@ -28,10 +28,10 @@ class _ScaleAppearState extends State<ScaleAppear>
     super.didChangeDependencies();
 
     // Access the factor from the FactorInheritedWidget
-    factor = FactorInheritedWidget.of(context)?.factor ?? 0.0;
+    factor = SlideShowFactors.of(context)?.factor ?? 0.0;
 
     // Update the animation based on the factor
-    if (factor >= 0) {
+    if (factor.abs() < .1) {
       Future.delayed(widget.delay).then((_) {
         if (mounted) _controller.forward();
       });
