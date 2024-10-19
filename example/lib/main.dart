@@ -22,6 +22,8 @@ class ExamplePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Slide Show Pro Example')),
       body: SlideShowProPage(
+        infiniteScroll: true,
+        initialPage: 5,
         //viewportFraction: 0.6,
         children: [
           EffectsBuilder(
