@@ -29,13 +29,12 @@ class ExamplePage extends StatelessWidget {
       appBar: AppBar(title: const Text('Slide Show Pro Example')),
       body: SlideShowProPage(
         infiniteScroll: true,
-        initialPage: 5,
+        initialPage: 0,
         //viewportFraction: 0.6,
         children: [
           EffectsBuilder(
             child: const FadeSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/bOdW4RjYBMU/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDF8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_0.jpg',
               shortDescription: 'Slide 1: Fade left',
               alignment: Alignment.centerLeft,
             ),
@@ -48,8 +47,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const FadeSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/OL3B-sC2ENo/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDJ8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_1.jpg',
               shortDescription: 'Slide 2: Fade left',
               alignment: Alignment.centerLeft,
             ),
@@ -62,8 +60,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const SlideTopSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/bOdW4RjYBMU/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDF8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_2.jpg',
               shortDescription: 'Slide 3: Slide left',
               alignment: Alignment.centerLeft,
             ),
@@ -76,8 +73,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const SlideBottomSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/OL3B-sC2ENo/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDJ8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_3.jpg',
               shortDescription: 'Slide 4: Slide right',
               alignment: Alignment.centerRight,
             ),
@@ -90,8 +86,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const FadeSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/bOdW4RjYBMU/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDF8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_4.jpg',
               shortDescription: 'Slide 5: Fade right',
               alignment: Alignment.centerRight,
             ),
@@ -104,8 +99,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const FadeSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/OL3B-sC2ENo/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDJ8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_0.jpg',
               shortDescription: 'Slide 6: Slide top',
               alignment: Alignment.centerLeft,
             ),
@@ -118,8 +112,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const FadeSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/bOdW4RjYBMU/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDF8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_1.jpg',
               shortDescription: 'Slide 7: Slide bottom',
               alignment: Alignment.centerRight,
             ),
@@ -132,8 +125,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const FadeSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/OL3B-sC2ENo/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDJ8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_2.jpg',
               shortDescription: 'Slide 8: Rotate left',
               alignment: Alignment.centerRight,
             ),
@@ -146,8 +138,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const FadeSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/bOdW4RjYBMU/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDF8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_3.jpg',
               shortDescription: 'Slide 9: Rotate right',
               alignment: Alignment.centerRight,
             ),
@@ -160,8 +151,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const FadeSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/OL3B-sC2ENo/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDJ8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_4.jpg',
               shortDescription: 'Slide 10: Rotate left',
               alignment: Alignment.centerRight,
             ),
@@ -175,8 +165,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const FadeSlide(
-              backgroundImage:
-                  'https://unsplash.com/photos/bOdW4RjYBMU/download?ixid=M3wxMjA3fDB8MXxjb2xsZWN0aW9ufDF8MTAyNTkxMHx8fHx8Mnx8MTcyOTAxMzY3M3w&force=true&w=1920',
+              backgroundImage: 'assets/background_0.jpg',
               shortDescription: 'Slide 11: Rotate right',
               alignment: Alignment.centerRight,
             ),
@@ -209,7 +198,7 @@ class FadeSlide extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(backgroundImage),
+          image: AssetImage(backgroundImage),
           fit: BoxFit.cover,
         ),
       ),
@@ -249,7 +238,7 @@ class ScaleSlide extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(backgroundImage),
+          image: AssetImage(backgroundImage),
           fit: BoxFit.cover,
         ),
       ),
@@ -289,7 +278,7 @@ class SlideBottomSlide extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(backgroundImage),
+          image: AssetImage(backgroundImage),
           fit: BoxFit.cover,
         ),
       ),
@@ -329,7 +318,7 @@ class SlideTopSlide extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(backgroundImage),
+          image: AssetImage(backgroundImage),
           fit: BoxFit.cover,
         ),
       ),
