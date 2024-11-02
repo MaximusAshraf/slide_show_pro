@@ -1,7 +1,7 @@
 # Slide Show Pro
 
-![slide_show_pro_demo_1.mp4](https://github.com/MaximusAshraf/slide_show_pro/blob/main/videos%2Fslide_show_pro_demo_1.mp4?raw=true)
-![slide_show_pro_demo_2.mp4](https://github.com/MaximusAshraf/slide_show_pro/blob/main/videos%2Fslide_show_pro_demo_2.mp4?raw=true)
+[slide_show_pro_demo_1.mp4](https://github.com/MaximusAshraf/slide_show_pro/blob/main/videos%2Fslide_show_pro_demo_1.mp4?raw=true)
+[slide_show_pro_demo_2.mp4](https://github.com/MaximusAshraf/slide_show_pro/blob/main/videos%2Fslide_show_pro_demo_2.mp4?raw=true)
 
 
 Slide Show Pro is a package designed to simplify the creation of animated sliders. With Slide Show Pro, you can seamlessly integrate various animation effects such as **fade**, **scale**, **slide**, and **rotate** into your projects.
