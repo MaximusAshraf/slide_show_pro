@@ -60,7 +60,7 @@ The following effects can be used within `SlideShowPro` to add animations to you
   - `FixedPositionEffect.vertical`
   - `FixedPositionEffect.horizontal`
 
-### SlideShowProPage Builder
+### Builder Constructor
 
 To create a slider with a large number of items that all share the same animation effect, you can use the `SlideShowProPage.builder` method.
 
@@ -86,7 +86,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-### EffectsBuilder
+### Effects Builder
 
 With `EffectsBuilder`, you can customize both entering and exiting effects for your slides.
 
