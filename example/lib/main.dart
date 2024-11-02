@@ -11,6 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      title: 'Slide Show Pro',
+      debugShowCheckedModeBanner: false,
       home: ExamplePage(),
       //home: InitStart(),
       //home: EffectsBuilderExample(),
@@ -165,7 +167,7 @@ class ExamplePage extends StatelessWidget {
           ),
           EffectsBuilder(
             child: const FadeSlide(
-              backgroundImage: 'assets/background_0.jpg',
+              backgroundImage: 'assets/background_2.jpg',
               shortDescription: 'Slide 11: Rotate right',
               alignment: Alignment.centerRight,
             ),
