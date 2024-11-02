@@ -31,7 +31,19 @@ const SlideShowProPage(
 )
 ```
 
+effects list:
+- `FadeEffect`
+- `ScaleEffect`
+- `RotateEffect`: use named constructor to set the direction of the rotation.
+like `RotateEffect.fromLeft`, `RotateEffect.fromRight`.
+- `SlideEffect`: use named constructor to set the direction of the slide. 
+like `SlideEffect.fromLeft`, `SlideEffect.fromRight`, `SlideEffect.fromTop`, `SlideEffect.fromBottom`.
+- `FixedPositionEffect`: use named constructor to set the direction of the slide.
+like `FixedPositionEffect.vertical`, `FixedPositionEffect.horizontal`.
 ### SlideShowProPage builder
+
+if you want to create a slider with a large number of items, with the same effect, you can use the `SlideShowProPage.builder` method.
+
 ```dart
 Widget build(BuildContext context) {
   return Scaffold(
@@ -55,6 +67,7 @@ Widget build(BuildContext context) {
 ```
 
 ### EffectsBuilder
+
 with `EffectsBuilder` you can customize entering and exiting effects.
 
 ```dart
@@ -80,4 +93,48 @@ SlideShowProPage(
         ),
       ],
     )
+```
+
+### Appear Effects
+
+If you want to show an item content if widget centered, you can use `Appear` effects.
+like `FadeAppear`, `ScaleAppear`, `SlideAppear`.
+for `SlideAppear` use named constructor to set the direction of the slide.
+like `SlideAppear.fromLeft`, `SlideAppear.fromRight`, `SlideAppear.fromTop`, `SlideAppear.fromBottom`.
+
+```dart
+Widget build(BuildContext context) {
+  return Scaffold(
+    body: SlideShowProPage(
+      children: [
+        RotateEffect.fromLeft(
+          child: Container(
+            color: Colors.black12,
+            child: const ScaleAppear(
+              child: Center(
+                child: Text(
+                  'Item 1',
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),
+          ),
+        ),
+        SlideEffect.fromLeft(
+          child: Container(
+            color: Colors.black26,
+            child: const FadeAppear(
+              child: Center(
+                child: Text(
+                  'Item 2',
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
 ```
