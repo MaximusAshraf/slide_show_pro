@@ -1,8 +1,6 @@
 # Slide Show Pro
 
-<video width="640" height="360" autoplay loop muted><source src="videos%2Fslide_show_pro_demo_1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-<video width="640" height="360" autoplay loop muted><source src="videos/slide_show_pro_demo_2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-
+[slide_show_pro_demo_1.mp4](videos%2Fslide_show_pro_demo_1.mp4) [slide_show_pro_demo_2.mp4](videos%2Fslide_show_pro_demo_2.mp4)
 
 Slide Show Pro is a package designed to simplify the creation of animated sliders. With Slide Show Pro, you can seamlessly integrate various animation effects such as **fade**, **scale**, **slide**, and **rotate** into your projects.
 
