@@ -31,7 +31,7 @@ const SlideShowProPage(
 )
 ```
 
-# SlideShowPro Effects List
+## SlideShowPro Effects List
 
 The following effects can be used within `SlideShowPro` to add animations to your slides:
 
