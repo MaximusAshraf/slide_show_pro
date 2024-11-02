@@ -60,9 +60,9 @@ The following effects can be used within `SlideShowPro` to add animations to you
   - `FixedPositionEffect.vertical`
   - `FixedPositionEffect.horizontal`
 
-### SlideShowProPage builder
+### SlideShowProPage Builder
 
-if you want to create a slider with a large number of items, with the same effect, you can use the `SlideShowProPage.builder` method.
+To create a slider with a large number of items that all share the same animation effect, you can use the `SlideShowProPage.builder` method.
 
 ```dart
 Widget build(BuildContext context) {
@@ -88,7 +88,7 @@ Widget build(BuildContext context) {
 
 ### EffectsBuilder
 
-with `EffectsBuilder` you can customize entering and exiting effects.
+With `EffectsBuilder`, you can customize both entering and exiting effects for your slides.
 
 ```dart
 SlideShowProPage(
@@ -117,10 +117,20 @@ SlideShowProPage(
 
 ### Appear Effects
 
-If you want to show an item content if widget centered, you can use `Appear` effects.
-like `FadeAppear`, `ScaleAppear`, `SlideAppear`.
-for `SlideAppear` use named constructor to set the direction of the slide.
-like `SlideAppear.fromLeft`, `SlideAppear.fromRight`, `SlideAppear.fromTop`, `SlideAppear.fromBottom`.
+To display an item’s content when the widget is centered, you can use `Appear` effects. Available options include:
+
+- **`FadeAppear`**  
+  Adds a fading appearance transition.
+
+- **`ScaleAppear`**  
+  Adds a scaling appearance transition.
+
+- **`SlideAppear`**  
+  Enables sliding appearance animations from various directions, with options specified through named constructors:
+  - `SlideAppear.fromLeft`
+  - `SlideAppear.fromRight`
+  - `SlideAppear.fromTop`
+  - `SlideAppear.fromBottom`
 
 ```dart
 Widget build(BuildContext context) {
