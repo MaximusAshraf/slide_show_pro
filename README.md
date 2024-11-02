@@ -52,8 +52,10 @@ The following effects can be used within `SlideShowPro` to add animations to you
   Allows sliding animations from different directions, selectable via named constructors:
   - `SlideEffect.fromLeft`
   - `SlideEffect.fromRight`
+  - `SlideEffect.reverseVertical`: reverse vertical sliding
   - `SlideEffect.fromTop`
   - `SlideEffect.fromBottom`
+  - `SlideEffect.reverseHorizontal`: reverse horizontal sliding
 
 - **`FixedPositionEffect`**  
   Fixes the slide in a set position, with options for direction using named constructors:
