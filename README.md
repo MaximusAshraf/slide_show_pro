@@ -31,15 +31,35 @@ const SlideShowProPage(
 )
 ```
 
-effects list:
-- `FadeEffect`
-- `ScaleEffect`
-- `RotateEffect`: use named constructor to set the direction of the rotation.
-like `RotateEffect.fromLeft`, `RotateEffect.fromRight`.
-- `SlideEffect`: use named constructor to set the direction of the slide. 
-like `SlideEffect.fromLeft`, `SlideEffect.fromRight`, `SlideEffect.fromTop`, `SlideEffect.fromBottom`.
-- `FixedPositionEffect`: use named constructor to set the direction of the slide.
-like `FixedPositionEffect.vertical`, `FixedPositionEffect.horizontal`.
+# SlideShowPro Effects List
+
+The following effects can be used within `SlideShowPro` to add animations to your slides:
+
+## Effects
+
+- **`FadeEffect`**  
+  Adds a fading transition to your slides.
+
+- **`ScaleEffect`**  
+  Adds a scaling transition to your slides.
+
+- **`RotateEffect`**  
+  Enables rotational animation, with options to specify the direction using named constructors:
+  - `RotateEffect.fromLeft`
+  - `RotateEffect.fromRight`
+
+- **`SlideEffect`**  
+  Allows sliding animations from different directions, selectable via named constructors:
+  - `SlideEffect.fromLeft`
+  - `SlideEffect.fromRight`
+  - `SlideEffect.fromTop`
+  - `SlideEffect.fromBottom`
+
+- **`FixedPositionEffect`**  
+  Fixes the slide in a set position, with options for direction using named constructors:
+  - `FixedPositionEffect.vertical`
+  - `FixedPositionEffect.horizontal`
+
 ### SlideShowProPage builder
 
 if you want to create a slider with a large number of items, with the same effect, you can use the `SlideShowProPage.builder` method.
