@@ -1,3 +1,4 @@
+import 'package:example/examples/builder_example.dart';
 import 'package:flutter/material.dart';
 import 'package:slide_show_pro/slide_show_pro.dart';
 
@@ -10,7 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: ExamplePage());
+    return const MaterialApp(
+      //home: ExamplePage(),
+      home: BuilderExample(),
+    );
   }
 }
 

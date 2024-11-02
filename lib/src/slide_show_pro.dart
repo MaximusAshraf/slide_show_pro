@@ -6,14 +6,28 @@ class SlideShowProPage extends StatefulWidget {
   final double viewportFraction;
   final bool infiniteScroll;
   final int initialPage;
+  final int? itemsCount;
+  final Widget Function(BuildContext, int)? itemBuilder;
 
+  // Default constructor requires children
   const SlideShowProPage({
     super.key,
     required this.children,
     this.viewportFraction = 1,
     this.infiniteScroll = false,
     this.initialPage = 0,
-  });
+  })  : itemBuilder = null,
+        itemsCount = null;
+
+  // Named constructor for using itemBuilder
+  const SlideShowProPage.builder({
+    super.key,
+    required this.itemBuilder,
+    required int this.itemsCount,
+    this.infiniteScroll = false,
+    this.viewportFraction = 1,
+    this.initialPage = 0,
+  }) : children = const [];
 
   @override
   State<SlideShowProPage> createState() => _SlideShowProPageState();
@@ -21,16 +35,15 @@ class SlideShowProPage extends StatefulWidget {
 
 class _SlideShowProPageState extends State<SlideShowProPage> {
   late final PageController _controller;
-
-  /// max and min range of the factor
   late final double rangeLimit;
-
+  late final int _itemsCount;
   double _scrollOffset = 0.0;
 
   @override
   void initState() {
+    _itemsCount = widget.itemsCount ?? widget.children.length;
     final initialPage = widget.infiniteScroll
-        ? widget.children.length * 100 + widget.initialPage
+        ? (_itemsCount) * 100 + widget.initialPage
         : widget.initialPage;
     _controller = PageController(
       viewportFraction: widget.viewportFraction,
@@ -50,16 +63,20 @@ class _SlideShowProPageState extends State<SlideShowProPage> {
   Widget build(BuildContext context) {
     return PageView.builder(
       controller: _controller,
-      itemCount: widget.infiniteScroll ? null : widget.children.length,
+      itemCount: widget.infiniteScroll ? null : _itemsCount,
       scrollDirection: Axis.vertical,
       itemBuilder: (context, index) {
-        // Calculate the factor based on scroll position
         double factor = (index - _scrollOffset).clamp(-rangeLimit, rangeLimit);
-        index = index % widget.children.length;
+        index = index % _itemsCount;
+
+        final child = widget.itemBuilder != null
+            ? widget.itemBuilder!(context, index)
+            : widget.children[index];
+
         return SlideShowFactors(
           factor: factor,
           rangeLimit: rangeLimit,
-          child: widget.children[index],
+          child: child,
         );
       },
     );
