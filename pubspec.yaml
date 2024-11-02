@@ -13,7 +13,7 @@ smooth and engaging animations, Slide Show Pro makes
 it easy to achieve professional-grade results with 
 minimal effort."
 
-version: 0.0.1
+version: 1.0.0
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
